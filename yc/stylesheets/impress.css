@@ -190,7 +190,7 @@ body     { pointer-events: none; }
   line-height: 160px;
   text-transform: uppercase;
   color: #333;
-  padding: 90px 0 120px;
+  padding-top: 90px;
 }
 
 #overwhelmed-by-web-apps img {
