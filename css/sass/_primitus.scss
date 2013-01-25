@@ -1,0 +1,577 @@
+/* primitus.scss
+ * Customized styles for Primitus
+ * -------------------------------------------------- */
+
+/* Body and structure
+-------------------------------------------------- */
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+a {
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+section {
+	font-style: normal;
+}
+
+/* Header
+-------------------------------------------------- */
+.logo { 
+	position:absolute;
+  top:15px;
+  left:17px;
+  display:block;
+  width:163px;
+  height:41px; 
+}
+
+/* Navigation arrows
+-------------------------------------------------- */
+nav { 
+	display:block;
+	position:fixed;
+  top:40%;
+	cursor:pointer;
+  z-index:2; 
+
+  div.nav-button {
+		display:inline-block;
+		background: no-repeat center top;
+		width: 74px;
+		padding-top: 78px;
+		text-align: center;
+		cursor:pointer;
+		@include opacity(0.7);
+		
+		&:hover {
+			cursor:pointer;
+			@include opacity(1);
+		}
+	}
+	
+	div.arrow-left {
+		background-image:url('../../images/misc/arrow-left.png');
+	}
+	div.arrow-right {
+		background-image:url('../../images/misc/arrow-right.png');
+	}
+	div.arrow-left-black {
+		background-image:url('../../images/misc/arrow-left-black.png');
+		@include opacity(0.4);
+	}
+	div.arrow-right-black {
+		background-image:url('../../images/misc/arrow-right-black.png');
+		@include opacity(0.4);
+	}
+	
+	a.nav-link {
+		color: #fff;
+		text-transform:uppercase;
+		cursor:pointer;
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	a.nav-link-black {
+		color: #000;
+		text-transform:uppercase;
+		cursor:pointer;
+		&:hover {
+			color: #000;
+		}
+	}
+
+}
+
+nav.right {
+	right: 0px;
+}
+
+nav.left {
+	left: 0px;
+}
+
+/* Products section
+-------------------------------------------------- */
+div#section-bg {
+
+	div.text-col {
+		margin-top: 95px;
+		color: #555;
+		
+		img.rt-logo {
+			margin-left: -18px;
+		}
+		
+		h2 {
+			margin: 22px 0 20px 0;
+			font-size: 24px;
+		}
+		p {
+			font-size: 16px;
+			color: #262626;
+			line-height: 24px;
+		}
+		
+		ul {
+		  margin: 25px 0 30px 0;
+		  padding: 0;
+		
+		  li {
+			  height: 71px;
+			  width: 71px;
+			  display: inline; 
+			  padding:0 5px 0 0; 
+			  float:left;
+			
+			  img {
+				  border: none;
+				  @include opacity(0.7);
+				  
+				  &:hover {
+						@include opacity(1);
+					}
+				}
+			}
+			li.active {
+				a {
+					cursor: default;
+				}
+				img {
+					@include opacity(1);
+				}
+			}
+		}
+		
+		div.site-link {
+			margin-bottom: 28px;
+			
+			a {
+				display: inline;
+				color: #fff;
+				font-size: 14px;
+				@include border-radius(4px);
+				background: #363636;
+				padding: 7px 7px 7px 6px;
+				
+				&:hover {
+					background: #111;
+				}
+				
+				i {
+					display: inline-block;
+					width:18px;
+					height:18px;
+					margin-right: 5px;
+					margin-bottom: -4px;
+					@include opacity(0.4);
+				}
+				
+				.web {
+					background: url(../../images/background/bg-sitelink-web.png) no-repeat;
+				}
+				
+				.twitter {
+					background: url(../../images/background/bg-sitelink-twitter.png) no-repeat;
+				}
+				
+				.weibo {
+					background: url(../../images/background/bg-sitelink-weibo.png) no-repeat;
+				}
+			}
+		}
+	}
+	div#ipad {
+		margin-top: 83px;
+		height: 674px;
+		width: 526px;
+		background:no-repeat center bottom; 
+		background-image:url('../../images/background/bg-products-ipad.png');
+		
+		div#screen {
+			padding: 60px 0 0 86px;
+		}
+	}
+	div#pagination {
+		
+		ul.page-circle {
+		  display:block;
+		  margin: 0 auto;
+		  padding: 0;
+			width: 108px;
+		
+		  li.circle {
+			  display: inline; 
+				height: 8px;
+			  width: 8px;
+			  padding:0 10px 0 0;
+			  
+			  a {
+				  img {
+					  border: none;
+					  @include opacity(0.3);
+				  
+					  &:hover {
+							@include opacity(1);
+						}
+					}
+				}
+				a.active {
+					cursor: default;
+					
+					img {
+						@include opacity(1);
+					}
+				}
+			}
+		}
+	}
+}
+
+$logo-square-width: 244px;
+
+div.home-bg {
+	min-height: 819px;
+	width: 100%;
+	background: #000 no-repeat center top; 
+	background-image:url('../../images/background/bg-home.jpg');
+	
+	div#logo-square {
+		position: absolute;
+		top:25%;
+		left:35%;
+		text-align: center;
+		width: $logo-square-width;
+	}
+	h1 {
+		font-weight: lighter;
+		font-size: 16px;
+		margin-top: 49%;
+		//margin: 10px 0 25px 0;
+		text-align: center;
+		color: #eee;
+
+	}
+	
+	div#home-nav-text {
+		width: $logo-square-width;
+		height: 40px;
+		text-align: center;
+		margin: 30px auto 0 auto;
+		font-family: 'Raleway', sans-serif;
+		font-size: 30px;
+		color: #fff;
+	}
+	
+	ul.home-nav {
+		margin: 0 auto;
+		padding: 0;
+		list-style:none;
+		width: $logo-square-width;
+		
+		&:hover > li a {
+			@include opacity(0.4);
+		}
+		
+		&:hover > li a:hover {
+			@include opacity(1);
+		}
+		
+		li {
+			cursor:pointer;
+			a {
+				border: none;
+				margin: 0;
+				padding: 0 17px;
+				box-shadow: none;
+				
+				&:hover {
+					box-shadow: none;
+				}
+			}
+			
+			img {
+				border: none;
+			}
+		}
+	}	
+}
+
+div.aboutus-bg {
+	min-height: 869px;
+	width: 100%;
+	background: #fff repeat-x center top; 
+	background-image:url('../../images/background/bg-hk.jpg');
+	
+	h1 {
+		font-family: 'Raleway', sans-serif;
+		font-size: 60px;
+		margin: 0 0 205px 0;
+		text-align: center;
+		color: #fff;
+	}
+	
+	h2 {
+		
+	}
+	
+	p {
+		font-weight: lighter;	
+	}
+	
+	div#team-info {
+		overflow:visible;
+    height:400px;
+		
+		.tips {
+			
+    }
+
+    .tips:after {
+    	content:"Rollover a team member to learn more";
+    }
+
+    @media  only screen and (min-device-width: 768px) and (max-device-width: 1024px),
+            only screen and (max-device-width: 480px)
+    {
+    	.tips:after {
+      	content:"Tap on a team member to learn more";
+      }
+    }
+		
+		ul.team-members {
+			margin: 20px 0 0 0;
+			padding: 0;
+			
+			li {
+				width:145px;
+				margin: 0 18px 0 0;
+				padding: 0;
+
+				ul.picture {
+					position:relative;
+	        height:270px;
+	        width:145px;
+					margin: 0;
+					padding: 0;
+	
+					li {
+						
+						a {
+			        width:145px;
+			        margin:0px;
+			        padding:0px;
+			        text-decoration:none;
+							border: none;
+							box-shadow: none;
+							
+							&:hover {
+								box-shadow: none;
+							}
+			
+							img {
+								border: none;
+								margin-bottom:13px;
+							}
+						}
+						p {
+							line-height: 20px;
+						}
+						div.personal-site {
+							position: absolute;
+							bottom: 0;
+						}	
+					}
+				}
+			}
+		}
+	}
+}
+
+div.products-bg {
+	min-height: 869px;
+	width: 100%;
+	background:#eee no-repeat center top; 
+	background-image:url('../../images/background/bg-products-1456.jpg');	
+	
+	ul.product-thumb {
+		padding: 0;
+		margin: 0;
+		
+		li {
+			
+			a {
+				border: none;
+				margin: 0;
+				padding: 0;
+				
+				&:hover {
+					box-shadow: none;
+				}
+			}
+			
+			img {
+				border: none;
+			}
+		}
+	}
+}
+
+div.works-bg {
+	min-height: 802px;
+	width: 100%;
+  background:#eee no-repeat center top; 
+  background-image:url('../../images/background/bg-works-1456.jpg');	
+	
+	h2 {
+		color: #000;
+	}
+	p {
+		color: #000;
+		margin-bottom: 17px;
+	}
+}
+
+div.jobs-bg {
+	min-height: 1000px;
+	width: 100%;
+	background: #fff repeat-x center top; 
+	background-image:url('../../images/background/bg-jobs-1800.jpg');	
+	
+	div.text-col {
+		color: #eee;
+			
+		h1 {
+			font-family: 'Raleway', sans-serif;
+			color: #fff;
+			font-size: 60px;
+			text-align: center;
+			margin: 30px 0 160px 0;
+		}
+		h2 {
+			
+		}
+		h3 {
+			font-size: 30px;
+			text-transform: uppercase;	
+			color: #333;		
+			font-family: 'Raleway', sans-serif;
+			font-weight: 400;
+		}
+		p {
+			margin-bottom: 17px;
+			font-weight: lighter;
+		}
+	}	
+}
+
+/* Footer
+-------------------------------------------------- */
+$footer-link-color: #fff;
+
+footer {
+	border: none;
+	width: 100%;
+	min-height: 250px;
+	background: #000;
+	color: $footer-link-color;
+	padding-top: 30px;
+	margin-top: 0;
+	font-style: normal;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 350;
+	font-size: 14px;
+	
+	div.row {
+		margin-bottom: 20px;
+		text-align: center;
+		
+	}
+	
+	ul {
+		list-style: none;
+		margin: auto;
+	  padding: 0;
+		
+		li {
+			float: left;
+			margin-right: 14px;
+			
+			a {
+				display: block;
+				margin-right: 0px;
+				color: $footer-link-color;
+				text-align: center;
+				
+				&:hover {
+					color: $footer-link-color;
+					text-decoration: none;
+				}
+				
+				img {
+					border: none;
+				}
+			}
+		}
+	}
+
+	ul.foot-nav {
+		width: 30.7em;
+	}
+	
+	ul.foot-sns {
+		width: 19.5em;
+		padding: 8px 0 3px 0;
+		
+		li a {
+			margin:0;
+			
+			&:hover {
+				@include opacity(0.6);
+			}
+		}
+	}
+}
+
+
+/* Misc
+-------------------------------------------------- */
+
+.float-left { 
+  float:left; 
+}
+
+.float-right { 
+  float:right; 
+}
+
+.hide { 
+  display:none; 
+}
+
+.unhide { 
+  display: inline; 
+}
+
+.display-block { 
+  display:block; 
+}
+
+.border {
+	border: 1px solid #000;
+}
+
+.align-c {
+	text-align: center;
+}
+
+/* Chrome extension element
+-------------------------------------------------- */
+el {
+	display:none;
+}
