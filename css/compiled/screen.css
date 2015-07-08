@@ -572,6 +572,7 @@ p {
   font-weight: normal;
   line-height: 18px;
   margin-bottom: 9px;
+  letter-spacing: 1px;
 }
 /* line 12, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass_twitter_bootstrap-0.1.7/stylesheets/compass_twitter_bootstrap/_type.scss */
 p small {
