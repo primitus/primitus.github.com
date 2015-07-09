@@ -3469,7 +3469,7 @@ div.aboutus-bg h1 {
 }
 /* line 323, ../sass/_primitus.scss */
 div.aboutus-bg p {
-  font-weight: lighter;
+  font-weight: 200;
 }
 /* line 327, ../sass/_primitus.scss */
 div.aboutus-bg div#team-info {
@@ -3608,7 +3608,7 @@ div.jobs-bg div.text-col h3 {
 /* line 466, ../sass/_primitus.scss */
 div.jobs-bg div.text-col p {
   margin-bottom: 17px;
-  font-weight: lighter;
+  font-weight: 200;
 }
 
 /* Footer
