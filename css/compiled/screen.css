@@ -3400,6 +3400,7 @@ div.home-bg div#logo-square {
 /* line 251, ../sass/_primitus.scss */
 div.home-bg h1 {
   font-weight: lighter;
+  letter-spacing: 1px;
   font-size: 16px;
   margin-top: 49%;
   text-align: center;
